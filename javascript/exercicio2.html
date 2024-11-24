@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio1- indece de massa corporal</title>  
+    <script>
+        //parãmetros
+        var nome = prompt(' digite o seu nome');
+        var altura = prompt('digite sua altura em cm');
+        var peso = prompt ('digite o seu peso');
+
+        //converte as cadeias de caracteres para dados do tipo float
+        altura = parseFloat(altura);
+        peso = parseFloat(peso);
+        console.log('altura',altura)
+        console.log('peso',peso)
+        //conversão da altura de cm para m 
+        altura = altura/100;
+        
+        console.log('altura',altura)
+        //cálculo de imc
+        var imc = peso / (altura*altura)
+        console.log(imc)
+        console.log(altura)
+
+        // testes condicionais para identificar a classificação do peso com base no imc 
+
+        var classificação = '';
+
+        if(imc < 16){
+            classificação = 'baixo peso muito grave';
+        }
+
+        else if (imc >= 16 && imc <= 16.99){
+            classificação = 'baixo peso grave';
+        }
+
+        else if(imc >=17 && imc <=18.49){
+            classificação = 'baixo peso';
+        }
+
+        else if(imc >= 18.50 && imc <= 24.99){
+            classificação = 'peso normal';
+        }
+
+        else if(imc >=25 && imc <= 29.99){
+            classificação = 'sobrepeso';
+        }
+
+        else if(imc >=30 && imc <=34.99){
+            classificação ='obesidade grau 1';
+        }
+        else if(imc >= 35 && imc <= 39.99){
+            classificação='obesidade grau 2';
+        }
+
+        else{
+            //se não estiver nos criterios acima e maior que 40
+            classificação = 'obesidade grau 3';
+        }
+
+        document.write(
+            nome  + ' possui indice de massa corporal igual a '  + imc.toFixed(2) +  ' ,sendo classificado como ' + classificação
+        )
+
+    
+
+
+
+
+
+
+        
+        
+        
+       
+
+      
+    </script>
+</head>
+
+<body>

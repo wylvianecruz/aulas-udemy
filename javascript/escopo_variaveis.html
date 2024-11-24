@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>escopo de variaveis </title>  
+    <script>
+
+        // 3 escopos: global, função/local e bloco
+
+
+        //escopo global-disponivel em todo o scrip.
+        var serie = 'friends'
+
+        //escopo de bloco
+        if(true){
+            var serie2 =" game of Throns"
+            document.write(serie)
+        }
+
+        document.write(serie2)
+
+        document.write('<br />')
+
+        //escopo local-dentro da função
+        function x(){
+
+            var serie3 = 'the walking dead'
+         
+            document.write(serie)
+            document.write(serie2)
+        }
+
+        x()
+
+        
+        document.write('<br />')
+        document.write(serie3)
+
+       
+      
+    </script>c
+</head>
+
+<body>
+  
+</body>
+</html>
